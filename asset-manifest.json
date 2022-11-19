@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Svetlana2505/hw001/static/css/main.751d09ac.css",
+    "main.js": "/Svetlana2505/hw001/static/js/main.112c6fe2.js",
+    "index.html": "/Svetlana2505/hw001/index.html",
+    "main.751d09ac.css.map": "/Svetlana2505/hw001/static/css/main.751d09ac.css.map",
+    "main.112c6fe2.js.map": "/Svetlana2505/hw001/static/js/main.112c6fe2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.751d09ac.css",
+    "static/js/main.112c6fe2.js"
+  ]
+}
