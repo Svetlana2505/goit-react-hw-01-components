@@ -1,4 +1,5 @@
-import { List, Image, Item, Span, Text } from './FriendList.styled';
+import { List } from './FriendList.styled';
+import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 import PropTypes from 'prop-types';
 
 export const FriendList = ({ friends }) => {
@@ -6,23 +7,24 @@ export const FriendList = ({ friends }) => {
     <List>
       {friends.map(({ avatar, name, isOnline, id }) => {
         return (
-          <Item key={id}>
-            <Span isOnline={isOnline}></Span>
-            <Image src={avatar} alt={name} width="48" />
-            <Text>{name}</Text>
-          </Item>
+          <FriendListItem
+            key={id}
+            avatar={avatar}
+            name={name}
+            isOnline={isOnline}
+          />
         );
       })}
     </List>
   );
 };
 
-FriendList.prototype = {
+FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
       avatar: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      id: PropTypes.string,
+      id: PropTypes.number,
     }).isRequired
   ).isRequired,
 };
